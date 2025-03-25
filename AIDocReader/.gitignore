@@ -188,6 +188,10 @@ _ReSharper*/
 *.[Rr]e[Ss]harper
 *.DotSettings.user
 
+# Ignore appsettings.json to prevent sensitive data from being committed
+appsettings.json
+appsettings.*.json   # Ignore environment-specific settings like appsettings.Development.json
+
 # TeamCity is a build add-in
 _TeamCity*
 

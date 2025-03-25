@@ -76,7 +76,7 @@
               "RelativeDocumentMoniker": ".gitignore",
               "ToolTip": "C:\\Users\\Devoteam\\Desktop\\Projects\\10_AIDoc2\\.NET_Azure_AI_DocumentIntelligence\\AIDocReader\\.gitignore",
               "RelativeToolTip": ".gitignore",
-              "ViewState": "AgIAADgCAAAAAAAAAAAgwFQCAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAALEAAAAAAAAAAAAAAMAAAABdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-03-25T12:49:08.856Z",
               "EditorCaption": ""
@@ -91,8 +91,7 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-25T12:47:41.353Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T12:47:41.353Z"
             },
             {
               "$type": "Document",
@@ -104,8 +103,7 @@
               "RelativeToolTip": "Client.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T09:18:08.072Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T09:18:08.072Z"
             },
             {
               "$type": "Document",
@@ -141,8 +139,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T09:04:50.676Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T09:04:50.676Z"
             },
             {
               "$type": "Document",
