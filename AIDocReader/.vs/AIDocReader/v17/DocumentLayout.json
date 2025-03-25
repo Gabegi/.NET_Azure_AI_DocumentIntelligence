@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Devoteam\\Desktop\\Projects\\10_AIDoc2\\.NET_Azure_AI_DocumentIntelligence\\AIDocReader\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BE17C9AE-4D11-4118-9F97-2096471AE218}|AIDocReader.csproj|c:\\users\\devoteam\\desktop\\projects\\10_aidoc2\\.net_azure_ai_documentintelligence\\aidocreader\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE17C9AE-4D11-4118-9F97-2096471AE218}|AIDocReader.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BE17C9AE-4D11-4118-9F97-2096471AE218}|AIDocReader.csproj|c:\\users\\devoteam\\desktop\\projects\\10_aidoc2\\.net_azure_ai_documentintelligence\\aidocreader\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE17C9AE-4D11-4118-9F97-2096471AE218}|AIDocReader.csproj|solutionrelative:client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BE17C9AE-4D11-4118-9F97-2096471AE218}|AIDocReader.csproj|c:\\users\\devoteam\\desktop\\projects\\10_aidoc2\\.net_azure_ai_documentintelligence\\aidocreader\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE17C9AE-4D11-4118-9F97-2096471AE218}|AIDocReader.csproj|solutionrelative:service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE17C9AE-4D11-4118-9F97-2096471AE218}|AIDocReader.csproj|c:\\users\\devoteam\\desktop\\projects\\10_aidoc2\\.net_azure_ai_documentintelligence\\aidocreader\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE17C9AE-4D11-4118-9F97-2096471AE218}|AIDocReader.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BE17C9AE-4D11-4118-9F97-2096471AE218}|AIDocReader.csproj|c:\\users\\devoteam\\desktop\\projects\\10_aidoc2\\.net_azure_ai_documentintelligence\\aidocreader\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 233,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,7 +62,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Client.cs",
               "DocumentMoniker": "C:\\Users\\Devoteam\\Desktop\\Projects\\10_AIDoc2\\.NET_Azure_AI_DocumentIntelligence\\AIDocReader\\Client.cs",
               "RelativeDocumentMoniker": "Client.cs",
@@ -75,7 +75,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Service.cs",
               "DocumentMoniker": "C:\\Users\\Devoteam\\Desktop\\Projects\\10_AIDoc2\\.NET_Azure_AI_DocumentIntelligence\\AIDocReader\\Service.cs",
               "RelativeDocumentMoniker": "Service.cs",
@@ -83,8 +83,7 @@
               "RelativeToolTip": "Service.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T09:17:58.399Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T09:17:58.399Z"
             },
             {
               "$type": "Document",
@@ -96,18 +95,17 @@
               "RelativeToolTip": "Properties\\launchSettings.json",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-24T09:05:23.661Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T09:05:23.661Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Devoteam\\Desktop\\Projects\\10_AIDoc2\\.NET_Azure_AI_DocumentIntelligence\\AIDocReader\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Devoteam\\Desktop\\Projects\\10_AIDoc2\\.NET_Azure_AI_DocumentIntelligence\\AIDocReader\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-24T09:04:50.676Z",
               "EditorCaption": ""
@@ -122,8 +120,7 @@
               "RelativeToolTip": "appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-24T09:04:48.224Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T09:04:48.224Z"
             }
           ]
         }
