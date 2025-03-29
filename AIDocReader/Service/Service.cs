@@ -1,4 +1,4 @@
-﻿namespace AIDocReader
+﻿namespace AIDocReader.Service
 {
     public class Service
     {

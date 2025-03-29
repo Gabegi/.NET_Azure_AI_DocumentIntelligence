@@ -1,17 +1,17 @@
 ﻿using Azure;
 using Azure.AI.DocumentIntelligence;
 
-namespace AIDocReader
+namespace AIDocReader.Client
 {
-    public class Client
+    public class Client : IClient 
     {
 
         private readonly DocumentIntelligenceClient _client;
-        public Client(IConfiguration configuration)
+        public Client(IConfiguration configuration) 
         {
             // Fetch values from appsettings.json
-            string endpoint = configuration?["AzureAI:Endpoint"];
-            string apiKey = configuration?["AzureAI:ApiKey"];
+            string? endpoint = configuration["AzureAI:Endpoint"];
+            string? apiKey = configuration["AzureAI:ApiKey"];
 
             // Validate values
             if (string.IsNullOrEmpty(endpoint) || string.IsNullOrEmpty(apiKey))

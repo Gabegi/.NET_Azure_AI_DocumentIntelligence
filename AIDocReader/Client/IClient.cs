@@ -1,6 +1,9 @@
-﻿namespace AIDocReader.Client
+﻿using Azure.AI.DocumentIntelligence;
+
+namespace AIDocReader.Client
 {
-    public class LClient
+    public interface IClient
     {
+        DocumentIntelligenceClient GetClient();
     }
 }

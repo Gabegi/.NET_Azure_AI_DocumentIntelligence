@@ -1,6 +1,8 @@
 ﻿namespace AIDocReader.Service
 {
-    public class IService
+    public interface IService
     {
+        Task<bool> WordExistsInDocumentAsync(string filePath, string wordToSearch);
+        
     }
 }
