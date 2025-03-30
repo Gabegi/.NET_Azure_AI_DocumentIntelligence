@@ -4,6 +4,6 @@ namespace AIDocReader.Client
 {
     public interface IClient
     {
-        DocumentIntelligenceClient GetClient();
+        Task<AnalyzeResult> AnalyzeDocumentAsync(Stream documentStream);
     }
 }

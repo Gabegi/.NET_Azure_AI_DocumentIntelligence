@@ -7,7 +7,8 @@ namespace AIDocReader.Client
     {
 
         private readonly DocumentIntelligenceClient _client;
-        public async Task<DocumentIntelligenceClient> Client(IConfiguration configuration) 
+
+        public Client(IConfiguration configuration) 
         {
             // Fetch values from appsettings.json
             string? endpoint = configuration["AzureAI:Endpoint"];
@@ -21,12 +22,13 @@ namespace AIDocReader.Client
 
             // Initialize AzureKeyCredential and DocumentIntelligenceClient
             var credential = new AzureKeyCredential(apiKey);
-            return new DocumentIntelligenceClient(new Uri(endpoint), credential);
+            _client = new DocumentIntelligenceClient(new Uri(endpoint), credential);
         }
 
-        public async Task<AnalyzeDocumentOperation> AnalyzeDocumentAsync(Stream documentStream)
+        public async Task<AnalyzeResult> AnalyzeDocumentAsync(Stream documentStream)
         {
-            return await _client.AnalyzeDocumentAsync(WaitUntil.Completed, "prebuilt-layout", documentStream);
+            return await _client.AnalyzeDocumentAsync(WaitUntil.Completed, , documentStream);
+            // Azure.AI.DocumentIntelligence.AnalyzeDocumentOptions
         }
     }
 }
