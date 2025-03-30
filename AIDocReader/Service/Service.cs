@@ -1,13 +1,14 @@
 ﻿using Azure.AI.DocumentIntelligence;
 using Azure;
+using AIDocReader.Client;
 
 namespace AIDocReader.Service
 {
     public class Service : IService
     {
-        private readonly DocumentIntelligenceClient _documentClient;
+        private readonly IClient _documentClient;
 
-        public Service(DocumentIntelligenceClient documentClient)
+        public Service(IClient documentClient)
         {
             _documentClient = documentClient;
         }
