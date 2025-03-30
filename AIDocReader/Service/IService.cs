@@ -2,7 +2,8 @@
 {
     public interface IService
     {
-        Task<bool> WordExistsInDocumentAsync(string filePath, string wordToSearch);
+        Task<bool> InputCheck(string filePath, string wordToSearch);
+        Task<string> CheckWordInDocument(string word, string filePath);
         
     }
 }
