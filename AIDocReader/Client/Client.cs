@@ -27,7 +27,7 @@ namespace AIDocReader.Client
 
         public async Task<AnalyzeResult> AnalyzeDocumentAsync(Stream documentStream)
         {
-            return await _client.AnalyzeDocumentAsync(WaitUntil.Completed, , documentStream);
+            return await _client.AnalyzeDocumentAsync(WaitUntil.Completed, "en", documentStream);
             // Azure.AI.DocumentIntelligence.AnalyzeDocumentOptions
         }
     }
