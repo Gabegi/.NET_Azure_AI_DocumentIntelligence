@@ -27,7 +27,14 @@ namespace AIDocReader.Client
 
         public async Task<AnalyzeResult> AnalyzeDocumentAsync(Stream documentStream)
         {
-            return await _client.AnalyzeDocumentAsync(WaitUntil.Completed, "en", documentStream);
+            //var options = new AnalyzeDocumentOptions("Locale"   )
+            //{
+            //    Locale = "en", // Set language to English
+            //    Pages = { "1" }, // Analyze the first page only
+            //    Features = { DocumentAnalysisFeature.Tables } // Enable table extraction (optional)
+            //};
+
+            return await _client.AnalyzeDocumentAsync(WaitUntil.Completed, "Locale", documentStream);
             // Azure.AI.DocumentIntelligence.AnalyzeDocumentOptions
         }
     }
