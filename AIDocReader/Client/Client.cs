@@ -29,8 +29,8 @@ namespace AIDocReader.Client
 
         public async Task<AnalyzeResult> AnalyzeDocumentAsync()
         {
-            Operation<AnalyzeResult> operation = await _client.AnalyzeDocumentAsync(WaitUntil.Completed, "prebuilt-layout", _documentURI);
-            return operation.Value;
+            var operation = await _client.AnalyzeDocumentAsync(WaitUntil.Completed, "prebuilt-layout", _documentURI);
+            return operation.Value.ToObjectFromJson<AnalyzeResult>();
         }
     }
 }
