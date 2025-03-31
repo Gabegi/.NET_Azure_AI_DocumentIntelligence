@@ -20,15 +20,7 @@ namespace AIDocReader.Service
 
             try
             {
-                // Analyze the document
-                var operation = await _documentClient.AnalyzeDocumentAsync(WaitUntil.Completed, "prebuilt-layout", word);
-                var result = operation.Value;
-
-                // Extract text from the document
-                var allText = string.Join(" ", result.Content);
-
-                // Check if the word exists in the document (case insensitive)
-                return allText.Contains(word, StringComparison.OrdinalIgnoreCase);
+                
             }
             catch (RequestFailedException ex)
             {
