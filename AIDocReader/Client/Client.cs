@@ -7,6 +7,7 @@ namespace AIDocReader.Client
     {
 
         private readonly DocumentIntelligenceClient _client;
+        private readonly string _documentURI;
 
         public Client(IConfiguration configuration) 
         {
@@ -23,6 +24,7 @@ namespace AIDocReader.Client
             // Initialize AzureKeyCredential and DocumentIntelligenceClient
             var credential = new AzureKeyCredential(apiKey);
             _client = new DocumentIntelligenceClient(new Uri(endpoint), credential);
+            _documentURI = configuration["AzureAI:documentURI"];
         }
 
         public async Task<AnalyzeResult> AnalyzeDocumentAsync(Stream documentStream)

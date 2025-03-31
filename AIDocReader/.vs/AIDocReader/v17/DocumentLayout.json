@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\lelyg\\Desktop\\code\\.NET_Azure_AI_DocumentIntelligence\\AIDocReader\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BE17C9AE-4D11-4118-9F97-2096471AE218}|AIDocReader.csproj|c:\\users\\lelyg\\desktop\\code\\.net_azure_ai_documentintelligence\\aidocreader\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BE17C9AE-4D11-4118-9F97-2096471AE218}|AIDocReader.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BE17C9AE-4D11-4118-9F97-2096471AE218}|AIDocReader.csproj|c:\\users\\lelyg\\desktop\\code\\.net_azure_ai_documentintelligence\\aidocreader\\client\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE17C9AE-4D11-4118-9F97-2096471AE218}|AIDocReader.csproj|solutionrelative:client\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -52,11 +56,24 @@
         },
         {
           "DockedWidth": 256,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\lelyg\\Desktop\\code\\.NET_Azure_AI_DocumentIntelligence\\AIDocReader\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\lelyg\\Desktop\\code\\.NET_Azure_AI_DocumentIntelligence\\AIDocReader\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAACQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-31T06:40:02.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "IClient.cs",
               "DocumentMoniker": "C:\\Users\\lelyg\\Desktop\\code\\.NET_Azure_AI_DocumentIntelligence\\AIDocReader\\Client\\IClient.cs",
               "RelativeDocumentMoniker": "Client\\IClient.cs",
@@ -64,18 +81,17 @@
               "RelativeToolTip": "Client\\IClient.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T19:05:23.641Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-30T19:05:23.641Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Client.cs",
               "DocumentMoniker": "C:\\Users\\lelyg\\Desktop\\code\\.NET_Azure_AI_DocumentIntelligence\\AIDocReader\\Client\\Client.cs",
               "RelativeDocumentMoniker": "Client\\Client.cs",
               "ToolTip": "C:\\Users\\lelyg\\Desktop\\code\\.NET_Azure_AI_DocumentIntelligence\\AIDocReader\\Client\\Client.cs",
               "RelativeToolTip": "Client\\Client.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwCIAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBoAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-30T17:38:13.582Z",
               "EditorCaption": ""
