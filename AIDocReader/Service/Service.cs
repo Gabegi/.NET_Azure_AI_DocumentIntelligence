@@ -13,10 +13,10 @@ namespace AIDocReader.Service
             _documentClient = documentClient;
         }
 
-        public async Task<string> CheckWordInDocument(string word, string filePath)
+        public async Task<string> CheckWordInDocument(string word)
         {
-            // Open the file as a stream
-            using var stream = File.OpenRead(filePath);
+            // Open the file
+            var file = _documentClient.AnalyzeDocumentAsync();
 
             try
             {
