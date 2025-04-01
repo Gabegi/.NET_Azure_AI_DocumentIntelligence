@@ -13,7 +13,6 @@ namespace AIDocReader.Service
             _documentClient = documentClient;
         }
 
-        // TO DO NOW
         public async Task<string> CheckWordInDocument(string word)
         {
             if (string.IsNullOrEmpty(word)) throw new ArgumentNullException(nameof(word), "Word to search cannot be null or empty.");
