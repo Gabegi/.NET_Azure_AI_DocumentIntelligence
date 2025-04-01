@@ -13,8 +13,11 @@ namespace AIDocReader.Service
             _documentClient = documentClient;
         }
 
+        // TO DO
         public async Task<string> CheckWordInDocument(string word)
         {
+            if (string.IsNullOrEmpty(word)) throw new ArgumentNullException(nameof(word), "Word to search cannot be null or empty.");
+
             // Open the file
             var file = _documentClient.AnalyzeDocumentAsync();
 
@@ -29,23 +32,6 @@ namespace AIDocReader.Service
             }
         }
 
-        public async Task<bool> InputCheck(string filePath, string wordToSearch)
-        {
-            if (string.IsNullOrEmpty(filePath))
-            {
-                throw new ArgumentNullException(nameof(filePath), "File path cannot be null or empty.");
-            }
-
-            if (string.IsNullOrEmpty(wordToSearch))
-            {
-                throw new ArgumentNullException(nameof(wordToSearch), "Word to search cannot be null or empty.");
-            }
-
-            if (!File.Exists(filePath))
-            {
-                throw new FileNotFoundException("The specified file does not exist.", filePath);
-            }
-            return true;
-        }
+        
     }
 }
