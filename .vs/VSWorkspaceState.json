@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\AIDocReader"
+    "\\AIDocReader",
+    "\\AIDocReader\\Client"
   ],
-  "SelectedNode": "\\AIDocReader\\AIDocReader.sln",
+  "SelectedNode": "\\AIDocReader\\Client\\Client.cs",
   "PreviewInSolutionExplorer": false
 }
