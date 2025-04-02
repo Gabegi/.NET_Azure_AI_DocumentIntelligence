@@ -29,6 +29,8 @@ namespace AIDocReader.Service
                 // Log the error or rethrow it based on your use case
                 throw new Exception("Failed to analyze the document.", ex);
             }
+
+            return "ok";
         }
 
         
