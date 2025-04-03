@@ -1,6 +1,7 @@
 ﻿using Azure.AI.DocumentIntelligence;
 using Azure;
 using AIDocReader.Client;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace AIDocReader.Service
 {
@@ -19,11 +20,25 @@ namespace AIDocReader.Service
 
             // Open the file
             var file = _documentClient.AnalyzeDocumentAsync();
+            var result = 
 
             try
             {
-                
-            }
+                foreach (var page in file.Pages)
+                {
+
+                    Console.WriteLine($"Page {page.PageNumber}:");
+
+                    foreach (var line in page.Lines)
+                    {
+                        foreach (var word in line.Content)
+                        {
+
+                            Console.Write(word);
+                            text += word;
+                        }
+                    }
+                }
             catch (RequestFailedException ex)
             {
                 // Log the error or rethrow it based on your use case
