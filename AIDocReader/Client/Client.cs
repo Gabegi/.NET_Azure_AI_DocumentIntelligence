@@ -27,10 +27,10 @@ namespace AIDocReader.Client
             _documentURI = configuration["AzureAI:documentURI"];
         }
 
-        public async Task<AnalyzeResult> AnalyzeDocumentAsync()
+        public async Task<BinaryData> AnalyzeDocumentAsync()
         {
             var operation = await _client.AnalyzeDocumentAsync(WaitUntil.Completed, "prebuilt-layout", _documentURI);
-            return operation.Value.ToObjectFromJson<AnalyzeResult>();
+            return operation.Value;
         }
     }
 }
