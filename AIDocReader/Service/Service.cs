@@ -20,25 +20,27 @@ namespace AIDocReader.Service
 
             // Open the file
             var file = _documentClient.AnalyzeDocumentAsync();
-            var result = 
+            var result = file.Result;
+            var text = string.Empty;
 
             try
             {
-                foreach (var page in file.Pages)
+                foreach (var page in result.Pages)
                 {
 
                     Console.WriteLine($"Page {page.PageNumber}:");
 
                     foreach (var line in page.Lines)
                     {
-                        foreach (var word in line.Content)
+                        foreach (var letter in line.Content)
                         {
 
-                            Console.Write(word);
-                            text += word;
+                            Console.Write(letter);
+                            text += letter;
                         }
                     }
                 }
+            }
             catch (RequestFailedException ex)
             {
                 // Log the error or rethrow it based on your use case
