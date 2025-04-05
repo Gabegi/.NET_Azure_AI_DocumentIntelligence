@@ -9,7 +9,7 @@ namespace AIDocReader.Client
     {
 
         private readonly DocumentIntelligenceClient _client;
-        private readonly string _documentURI;
+        private readonly Uri _documentURI;
 
         public Client(IConfiguration configuration) 
         {
