@@ -4,6 +4,6 @@ namespace AIDocReader.Client
 {
     public interface IClient
     {
-        Task<AnalyzeResult> AnalyzeDocumentAsync();
+        Task<BinaryData> AnalyzeDocumentAsync();
     }
 }
