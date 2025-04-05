@@ -29,21 +29,23 @@ namespace AIDocReader.Client
             _documentURI = configuration["AzureAI:documentURI"];
         }
 
-        public async Task<AnalyzeResult> AnalyzeDocumentAsync()
-        {
-            var operation = await _client.AnalyzeDocumentAsync(WaitUntil.Completed, "prebuilt-layout", _documentURI);
+        //public async Task<AnalyzeResult> AnalyzeDocumentAsync()
+        //{
+        //    var operation = await _client.AnalyzeDocumentAsync(WaitUntil.Completed, "prebuilt-layout", _documentURI);
 
-            return operation.Value.ToObjectFromJson<AnalyzeResult>();
-        }
+        //    return operation.Value.ToObjectFromJson<AnalyzeResult>();
+        //}
 
-        public async Task<AnalyzeResult> AnalyzeDocumentAsyncStream()
+        public async Task<AnalyzeResult> AnalyzeDocumentAsyncStream(CancellationToken token)
         {
-            using var stream = await DownloadDocumentAsync(_documentURI);
+            //using var stream = await DownloadDocumentAsync(_documentURI);
+
+            var options = new AnalyzeDocumentOptions("prebuilt-layout", _documentURI);
 
             var operation = await _client.AnalyzeDocumentAsync(
                 WaitUntil.Completed,
-                "prebuilt-layout",
-                stream);
+                options,
+                token);
 
             return operation.Value;
         }
