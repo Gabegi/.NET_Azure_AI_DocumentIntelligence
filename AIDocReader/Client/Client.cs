@@ -29,12 +29,6 @@ namespace AIDocReader.Client
             _documentURI = configuration["AzureAI:documentURI"];
         }
 
-        //public async Task<AnalyzeResult> AnalyzeDocumentAsync()
-        //{
-        //    var operation = await _client.AnalyzeDocumentAsync(WaitUntil.Completed, "prebuilt-layout", _documentURI);
-
-        //    return operation.Value.ToObjectFromJson<AnalyzeResult>();
-        //}
 
         public async Task<AnalyzeResult> AnalyzeDocumentAsyncStream(CancellationToken token)
         {
@@ -50,14 +44,14 @@ namespace AIDocReader.Client
             return operation.Value;
         }
 
-        private async Task<Stream> DownloadDocumentAsync(Uri documentUri)
-        {
-            var httpClient = new HttpClient();
-            var response = await httpClient.GetAsync(documentUri);
-            response.EnsureSuccessStatusCode();
+        // less safe method (uses ToObjectFromJson since operation is of Byte type)
+        //public async Task<AnalyzeResult> AnalyzeDocumentAsync()
+        //{
+        //    var operation = await _client.AnalyzeDocumentAsync(WaitUntil.Completed, "prebuilt-layout", _documentURI);
 
-            return await response.Content.ReadAsStreamAsync();
-        }
+        //    return operation.Value.ToObjectFromJson<AnalyzeResult>();
+        //}
+
 
 
     }
