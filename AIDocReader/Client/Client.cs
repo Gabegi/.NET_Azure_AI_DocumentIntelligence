@@ -35,5 +35,28 @@ namespace AIDocReader.Client
 
             return operation.Value.ToObjectFromJson<AnalyzeResult>();
         }
+
+        public async Task<AnalyzeResult> AnalyzeDocumentAsyncStream()
+        {
+            using var stream = await DownloadDocumentAsync(_documentURI);
+
+            var operation = await _client.AnalyzeDocumentAsync(
+                WaitUntil.Completed,
+                "prebuilt-layout",
+                stream);
+
+            return operation.Value;
+        }
+
+        private async Task<Stream> DownloadDocumentAsync(Uri documentUri)
+        {
+            var httpClient = new HttpClient();
+            var response = await httpClient.GetAsync(documentUri);
+            response.EnsureSuccessStatusCode();
+
+            return await response.Content.ReadAsStreamAsync();
+        }
+
+
     }
 }
