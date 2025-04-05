@@ -1,7 +1,5 @@
 ﻿using Azure;
 using Azure.AI.DocumentIntelligence;
-using Microsoft.AspNetCore.SignalR.Protocol;
-using Microsoft.Extensions.Azure;
 
 namespace AIDocReader.Client
 {
@@ -26,11 +24,11 @@ namespace AIDocReader.Client
             // Initialize AzureKeyCredential and DocumentIntelligenceClient
             var credential = new AzureKeyCredential(apiKey);
             _client = new DocumentIntelligenceClient(new Uri(endpoint), credential);
-            _documentURI = configuration["AzureAI:documentURI"];
+            _documentURI = new Uri(configuration["AzureAI:documentURI"]);
         }
 
 
-        public async Task<AnalyzeResult> AnalyzeDocumentAsyncStream(CancellationToken token)
+        public async Task<AnalyzeResult> AnalyzeDocumentAsync(CancellationToken token)
         {
             //using var stream = await DownloadDocumentAsync(_documentURI);
 

@@ -64,20 +64,8 @@
         },
         {
           "DockedWidth": 256,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IService.cs",
-              "DocumentMoniker": "C:\\Users\\lelyg\\Desktop\\code\\.NET_Azure_AI_DocumentIntelligence\\AIDocReader\\Service\\IService.cs",
-              "RelativeDocumentMoniker": "Service\\IService.cs",
-              "ToolTip": "C:\\Users\\lelyg\\Desktop\\code\\.NET_Azure_AI_DocumentIntelligence\\AIDocReader\\Service\\IService.cs",
-              "RelativeToolTip": "Service\\IService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T13:21:43.743Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -124,10 +112,22 @@
               "RelativeDocumentMoniker": "Client\\Client.cs",
               "ToolTip": "C:\\Users\\lelyg\\Desktop\\code\\.NET_Azure_AI_DocumentIntelligence\\AIDocReader\\Client\\Client.cs",
               "RelativeToolTip": "Client\\Client.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACQAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAwDQAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-30T17:38:13.582Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IService.cs",
+              "DocumentMoniker": "C:\\Users\\lelyg\\Desktop\\code\\.NET_Azure_AI_DocumentIntelligence\\AIDocReader\\Service\\IService.cs",
+              "RelativeDocumentMoniker": "Service\\IService.cs",
+              "ToolTip": "C:\\Users\\lelyg\\Desktop\\code\\.NET_Azure_AI_DocumentIntelligence\\AIDocReader\\Service\\IService.cs",
+              "RelativeToolTip": "Service\\IService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T13:21:43.743Z"
             }
           ]
         }
