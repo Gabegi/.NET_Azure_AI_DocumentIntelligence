@@ -1,5 +1,7 @@
 ﻿using Azure;
 using Azure.AI.DocumentIntelligence;
+using Microsoft.AspNetCore.SignalR.Protocol;
+using Microsoft.Extensions.Azure;
 
 namespace AIDocReader.Client
 {
@@ -27,10 +29,11 @@ namespace AIDocReader.Client
             _documentURI = configuration["AzureAI:documentURI"];
         }
 
-        public async Task<BinaryData> AnalyzeDocumentAsync()
+        public async Task<AnalyzeResult> AnalyzeDocumentAsync()
         {
             var operation = await _client.AnalyzeDocumentAsync(WaitUntil.Completed, "prebuilt-layout", _documentURI);
-            return operation.Value;
+
+            return operation.Value.ToObjectFromJson<AnalyzeResult>();
         }
     }
 }
