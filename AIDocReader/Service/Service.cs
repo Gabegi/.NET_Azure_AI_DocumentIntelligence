@@ -2,6 +2,7 @@
 using Azure;
 using AIDocReader.Client;
 using static System.Net.Mime.MediaTypeNames;
+using System.Text;
 
 namespace AIDocReader.Service
 {
@@ -14,6 +15,8 @@ namespace AIDocReader.Service
             _documentClient = documentClient;
         }
 
+
+
         public async Task<string> CheckWordInDocument(string word, CancellationToken token)
         {
             if (string.IsNullOrEmpty(word)) throw new ArgumentNullException(nameof(word), "Word to search cannot be null or empty.");
@@ -23,21 +26,18 @@ namespace AIDocReader.Service
 
             try
             {
+                var fullTextBuilder = new StringBuilder();
+
                 foreach (var page in result.Pages)
                 {
-
-                    Console.WriteLine($"Page {page.PageNumber}:");
-
                     foreach (var line in page.Lines)
                     {
-                        foreach (var letter in line.Content)
-                        {
-
-                            Console.Write(letter);
-                            text += letter;
-                        }
+                        fullTextBuilder.AppendLine(line.Content); // Add full line text
                     }
                 }
+
+                var fullText = fullTextBuilder.ToString();
+
             }
             catch (RequestFailedException ex)
             {

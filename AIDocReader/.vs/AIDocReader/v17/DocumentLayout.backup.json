@@ -74,7 +74,7 @@
               "RelativeDocumentMoniker": "Service\\Service.cs",
               "ToolTip": "C:\\Users\\lelyg\\Desktop\\code\\.NET_Azure_AI_DocumentIntelligence\\AIDocReader\\Service\\Service.cs",
               "RelativeToolTip": "Service\\Service.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAcwBUAAABHAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAcwBoAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-31T07:06:48.152Z",
               "EditorCaption": ""
@@ -101,7 +101,8 @@
               "RelativeToolTip": "Client\\IClient.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T19:05:23.641Z"
+              "WhenOpened": "2025-03-30T19:05:23.641Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -111,9 +112,10 @@
               "RelativeDocumentMoniker": "Client\\Client.cs",
               "ToolTip": "C:\\Users\\lelyg\\Desktop\\code\\.NET_Azure_AI_DocumentIntelligence\\AIDocReader\\Client\\Client.cs",
               "RelativeToolTip": "Client\\Client.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwBoAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwC0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T17:38:13.582Z"
+              "WhenOpened": "2025-03-30T17:38:13.582Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
