@@ -19,9 +19,7 @@ namespace AIDocReader.Service
             if (string.IsNullOrEmpty(word)) throw new ArgumentNullException(nameof(word), "Word to search cannot be null or empty.");
 
             // Open the file
-            var file = await _documentClient.AnalyzeDocumentAsync(token);
-            var result = file.Result;
-            var text = string.Empty;
+            var result = await _documentClient.AnalyzeDocumentAsync(token);
 
             try
             {

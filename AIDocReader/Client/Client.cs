@@ -43,6 +43,7 @@ namespace AIDocReader.Client
         }
 
         // less safe method (uses ToObjectFromJson since operation is of Byte type)
+
         //public async Task<AnalyzeResult> AnalyzeDocumentAsync()
         //{
         //    var operation = await _client.AnalyzeDocumentAsync(WaitUntil.Completed, "prebuilt-layout", _documentURI);
