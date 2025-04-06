@@ -15,11 +15,16 @@ namespace AIDocReader.Service
             _documentClient = documentClient;
         }
 
-
-
-        public async Task<string> CheckWordInDocument(string word, CancellationToken token)
+        public async Task<bool> CheckIfWordInDocument(string word)
         {
             if (string.IsNullOrEmpty(word)) throw new ArgumentNullException(nameof(word), "Word to search cannot be null or empty.");
+
+            return true;
+
+        }
+
+        public async Task<string> ExtractDocumentWords(CancellationToken token)
+        {
 
             // Open the file
             var result = await _documentClient.AnalyzeDocumentAsync(token);
