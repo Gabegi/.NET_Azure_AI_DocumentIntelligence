@@ -1,7 +1,5 @@
-﻿using Azure.AI.DocumentIntelligence;
-using Azure;
+﻿using Azure;
 using AIDocReader.Client;
-using static System.Net.Mime.MediaTypeNames;
 using System.Text;
 
 namespace AIDocReader.Service
