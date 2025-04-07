@@ -2,7 +2,10 @@
 {
     public interface IService
     {
-        Task<string> CheckWordInDocument(string word);
-        
+        Task<bool> CheckIfWordInDocument(string word);
+
+        Task<string> ExtractDocumentWords(CancellationToken token);
+
+
     }
 }
