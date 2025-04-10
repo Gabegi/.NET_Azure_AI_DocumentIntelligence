@@ -1,7 +1,6 @@
 ﻿
 using AIDocReader.Client;
 using AIDocReader.Service;
-using Azure.Core;
 using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,8 +15,8 @@ builder.Services.AddScoped<IClient, Client>();
 builder.Services.AddControllers();
 
 var app = builder.Build();
-app.UseHttpsRedirection();  
-//app.MapControllers();
+app.UseHttpsRedirection();
+app.MapControllers();
 
 app.MapGet("/", () => Results.Ok("API is running ✅"));
 
