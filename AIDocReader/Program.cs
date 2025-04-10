@@ -11,6 +11,10 @@ builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnC
 builder.Services.AddScoped<IService, Service>();
 builder.Services.AddScoped<IClient, Client>();
 
+// Add this before builder.Build()
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 var app = builder.Build();
 
 app.MapPost("/getword", async (Keyword request, IService service, CancellationToken token) =>
