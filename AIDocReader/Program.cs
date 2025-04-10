@@ -1,4 +1,4 @@
-
+﻿
 using AIDocReader.Client;
 using AIDocReader.Service;
 
@@ -11,11 +11,18 @@ builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnC
 builder.Services.AddScoped<IService, Service>();
 builder.Services.AddScoped<IClient, Client>();
 
-var app = builder.Build();
-app.MapPost("/test", () => Results.Ok("Works!"));
+builder.Services.AddControllers();
 
-app.MapPost("/getword", async (Keyword request, IService service, CancellationToken token) =>
+
+
+var app = builder.Build();
+app.UseHttpsRedirection();
+
+app.MapGet("/", () => Results.Ok("API is running ✅"));
+
+app.MapPost("/getword", async (Keyword request, IService service) =>
 {
+    var token = new CancellationToken();
     try
     {
         var found = await service.CheckIfWordInDocument(request.Word, token);
@@ -34,7 +41,6 @@ app.MapPost("/getword", async (Keyword request, IService service, CancellationTo
 });
 
 
-app.UseHttpsRedirection();
 
 app.Run();
 
