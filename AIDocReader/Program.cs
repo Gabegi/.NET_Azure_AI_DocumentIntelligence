@@ -1,13 +1,29 @@
 
+using AIDocReader.Service;
+
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
 var app = builder.Build();
 
-app.MapPost("/getword", (Keyword request) =>
+app.MapPost("/getword", async (Keyword request, IService service, CancellationToken token) =>
 {
-    var response = new { Keyword = $"Received: {request.Word}" };
-    return Results.Json(response);
+    try
+    {
+        var found = await service.CheckIfWordInDocument(request.Word, token);
+        var response = new 
+        {
+            Word = request.Word,
+            Found = found
+        };
+
+        return Results.Json(response);
+    }
+    catch (Exception ex)
+    {
+        return Results.Problem($"Error while checking the document: {ex.Message}");
+    }
 });
+
 
 app.UseHttpsRedirection();
 

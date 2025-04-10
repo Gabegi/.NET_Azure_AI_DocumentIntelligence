@@ -1,6 +1,8 @@
 ﻿using Azure;
 using AIDocReader.Client;
 using System.Text;
+using System.Text.RegularExpressions;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace AIDocReader.Service
 {
@@ -13,12 +15,21 @@ namespace AIDocReader.Service
             _documentClient = documentClient;
         }
 
-        public async Task<bool> CheckIfWordInDocument(string word)
+
+        public async Task<bool> CheckIfWordInDocument(string word, CancellationToken token)
         {
-            if (string.IsNullOrEmpty(word)) throw new ArgumentNullException(nameof(word), "Word to search cannot be null or empty.");
+            if (string.IsNullOrWhiteSpace(word))
+                throw new ArgumentNullException(nameof(word), "Word to search cannot be null or empty.");
 
-            return true;
+            var text = await ExtractDocumentWords(token);
 
+            
+
+            // Use regex to match the word exactly, case-insensitive and with word boundaries
+            var pattern = $@"\b{Regex.Escape(word)}\b";
+            var match = Regex.IsMatch(text, pattern, RegexOptions.IgnoreCase);
+
+            return match;
         }
 
         public async Task<string> ExtractDocumentWords(CancellationToken token)
@@ -39,8 +50,8 @@ namespace AIDocReader.Service
                     }
                 }
 
-                return fullTextBuilder.ToString();
-
+                // Normalise the text: trim and collapse multiple whitespaces
+                return Regex.Replace(fullTextBuilder.ToString().Trim(), @"\s+", " ");
             }
             catch (RequestFailedException ex)
             {
