@@ -1,6 +1,8 @@
 ﻿
 using AIDocReader.Client;
 using AIDocReader.Service;
+using Azure.Core;
+using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,14 +15,15 @@ builder.Services.AddScoped<IClient, Client>();
 
 builder.Services.AddControllers();
 
-
-
 var app = builder.Build();
-app.UseHttpsRedirection();
+app.UseHttpsRedirection();  
+//app.MapControllers();
 
 app.MapGet("/", () => Results.Ok("API is running ✅"));
 
-app.MapPost("/getword", async (Keyword request, IService service) =>
+app.MapPost("/getword", async(
+    [FromBody] Keyword request,
+    [FromServices] IService service) =>
 {
     var token = new CancellationToken();
     try
