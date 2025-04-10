@@ -1,8 +1,16 @@
 
+using AIDocReader.Client;
 using AIDocReader.Service;
 
 var builder = WebApplication.CreateBuilder(args);
-var configuration = builder.Configuration;
+
+builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                      .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true);
+
+
+builder.Services.AddScoped<IService, Service>();
+builder.Services.AddScoped<IClient, Client>();
+
 var app = builder.Build();
 
 app.MapPost("/getword", async (Keyword request, IService service, CancellationToken token) =>
