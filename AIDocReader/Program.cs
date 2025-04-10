@@ -11,9 +11,7 @@ builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnC
 builder.Services.AddScoped<IService, Service>();
 builder.Services.AddScoped<IClient, Client>();
 
-// Add this before builder.Build()
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+//builder.Services.AddEndpointsApiExplorer();
 
 var app = builder.Build();
 
