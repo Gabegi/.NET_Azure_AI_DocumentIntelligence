@@ -12,6 +12,7 @@ builder.Services.AddScoped<IService, Service>();
 builder.Services.AddScoped<IClient, Client>();
 
 var app = builder.Build();
+app.MapPost("/test", () => Results.Ok("Works!"));
 
 app.MapPost("/getword", async (Keyword request, IService service, CancellationToken token) =>
 {
