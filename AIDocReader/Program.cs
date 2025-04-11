@@ -7,10 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IService, Service>();
 builder.Services.AddScoped<IClient, Client>();
 
-//builder.Services.AddControllers();
-
 var app = builder.Build();
-//app.UseHttpsRedirection();
 
 app.MapGet("/", () => Results.Ok("API is running ✅"));
 
