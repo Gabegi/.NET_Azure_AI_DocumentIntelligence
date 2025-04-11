@@ -1,26 +1,20 @@
-﻿
-using AIDocReader.Client;
+﻿using AIDocReader.Client;
 using AIDocReader.Service;
 using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-                      .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true);
-
-
 builder.Services.AddScoped<IService, Service>();
 builder.Services.AddScoped<IClient, Client>();
 
-builder.Services.AddControllers();
+//builder.Services.AddControllers();
 
 var app = builder.Build();
-app.UseHttpsRedirection();
-app.MapControllers();
+//app.UseHttpsRedirection();
 
 app.MapGet("/", () => Results.Ok("API is running ✅"));
 
-app.MapPost("/getword", async(
+app.MapPost("/getword", async (
     [FromBody] Keyword request,
     [FromServices] IService service) =>
 {
@@ -28,7 +22,7 @@ app.MapPost("/getword", async(
     try
     {
         var found = await service.CheckIfWordInDocument(request.Word, token);
-        var response = new 
+        var response = new
         {
             Word = request.Word,
             Found = found
@@ -50,3 +44,6 @@ public class Keyword
 {
     public string Word { get; set; }
 }
+
+//builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+//                      .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true);
