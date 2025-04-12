@@ -1,4 +1,5 @@
-﻿using AIDocReader.Service;
+﻿using AIDocReader.Controller;
+using AIDocReader.Service;
 using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
@@ -24,9 +25,9 @@ public class WordController : ControllerBase
         try
         {
             var found = await _service.CheckIfWordInDocument(request.Word, cancellationToken);
-            var response = new
+            var response = new Word
             {
-                Word = request.Word,
+                keyWord = request.Word,
                 Found = found
             };
 
