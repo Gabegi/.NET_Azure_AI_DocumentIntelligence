@@ -2,7 +2,7 @@
 {
     public class Word
     {
-            public string Word { get; set; }
+        public string keyWord { get; set; }
         
     }
 }
