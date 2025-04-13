@@ -13,13 +13,13 @@ public class WordController : ControllerBase
         _service = service;
     }
 
-    [HttpGet("")]
+    [HttpGet("/")]
     public IActionResult GetRoot()
     {
         return Ok("API is running ✅");
     }
 
-    [HttpPost("getword")]
+    [HttpPost("/getword")]
     public async Task<IActionResult> GetWord([FromBody] WordRequest request, CancellationToken cancellationToken)
     {
         try
