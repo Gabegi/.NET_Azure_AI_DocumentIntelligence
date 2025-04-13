@@ -13,7 +13,7 @@ public class WordController : ControllerBase
         _service = service;
     }
 
-    [HttpGet("/")]
+    [HttpGet("")]
     public IActionResult GetRoot()
     {
         return Ok("API is running ✅");
