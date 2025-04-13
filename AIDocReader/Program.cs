@@ -10,7 +10,11 @@ builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnC
 builder.Services.AddScoped<IService, Service>();
 builder.Services.AddScoped<IClient, Client>();
 
+builder.Services.AddControllers();
+
+
 var app = builder.Build();
+app.MapControllers();
 
 
 app.Run();
