@@ -5,7 +5,6 @@ namespace AIDocReader.Controller
     public class WordRequest
     {
         [JsonPropertyName("KeyWord")]
-
         public string KeyWord { get; set; }
         
     }
