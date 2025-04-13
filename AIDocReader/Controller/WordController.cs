@@ -20,14 +20,14 @@ public class WordController : ControllerBase
     }
 
     [HttpPost("getword")]
-    public async Task<IActionResult> GetWord([FromBody] Keyword request, CancellationToken cancellationToken)
+    public async Task<IActionResult> GetWord([FromBody] WordRequest request, CancellationToken cancellationToken)
     {
         try
         {
-            var found = await _service.CheckIfWordInDocument(request.Word, cancellationToken);
-            var response = new Word
+            var found = await _service.CheckIfWordInDocument(request.KeyWord, cancellationToken);
+            var response = new WordResponse
             {
-                keyWord = request.Word,
+                KeyWord = request.KeyWord,
                 Found = found
             };
 
