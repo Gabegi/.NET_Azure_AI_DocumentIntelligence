@@ -1,6 +1,5 @@
 ﻿using AIDocReader.Client;
 using AIDocReader.Service;
-using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 

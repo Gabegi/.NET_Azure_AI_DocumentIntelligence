@@ -2,7 +2,7 @@
 {
     public abstract class WordRequest
     {
-        public string keyWord { get; set; }
+        public string KeyWord { get; set; }
         
     }
 
