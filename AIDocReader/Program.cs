@@ -9,8 +9,6 @@ builder.Services.AddScoped<IClient, Client>();
 var app = builder.Build();
 
 
-
-
 app.Run();
 
 
