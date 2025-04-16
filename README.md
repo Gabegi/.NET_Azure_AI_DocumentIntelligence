@@ -11,4 +11,3 @@ The return statement should provide further details.
 - User send a word per POST API
 - App forwards word to AI Azure Client
 - Client analyses document and sees if word in document
--
