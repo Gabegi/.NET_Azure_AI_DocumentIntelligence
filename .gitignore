@@ -1,5 +1,6 @@
 ################################## Terraform Ignore ########################################################
-
+*.vs/slnx.sqlite
+*.lock.hcl
 
 # Local .terraform directories
 **/.terraform/*
