@@ -30,8 +30,6 @@ namespace AIDocReader.Client
 
         public async Task<AnalyzeResult> AnalyzeDocumentAsync(CancellationToken token)
         {
-            //using var stream = await DownloadDocumentAsync(_documentURI);
-
             var options = new AnalyzeDocumentOptions("prebuilt-layout", _documentURI);
 
             var operation = await _client.AnalyzeDocumentAsync(
